@@ -33,7 +33,7 @@ When invoked in your gem's root directory, this script:
 
 ## Setup
 
-You can host this script in its own repository (for example `my-company/release-script`) and call it remotely from your
+You can host this script in its own repository (for example `my-company/release_gem`) and call it remotely from your
 projects.
 
 1. **Add a minimal `bin/release`** to any gem project:
@@ -42,7 +42,7 @@ projects.
    #!/usr/bin/env bash
    set -euo pipefail
 
-   curl -sSL https://raw.githubusercontent.com/<your-username>/release-script/master/release | bash
+   bash <(curl -sSL https://raw.githubusercontent.com/<your-username>/release_gem/refs/heads/master/release)
    ```
 
 2. Make sure it's executable:
